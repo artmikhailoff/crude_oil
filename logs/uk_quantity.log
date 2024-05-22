@@ -1,0 +1,263 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.iceberg#iceberg-spark-runtime-3.4_2.12 added as a dependency
+org.apache.iceberg#iceberg-aws-bundle added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-cd59f3a5-13d6-41af-85b6-bee761a75a89;1.0
+	confs: [default]
+	found org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0 in central
+	found org.apache.iceberg#iceberg-aws-bundle;1.4.0 in central
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.4_2.12/1.4.0/iceberg-spark-runtime-3.4_2.12-1.4.0.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0!iceberg-spark-runtime-3.4_2.12.jar (687ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-aws-bundle/1.4.0/iceberg-aws-bundle-1.4.0.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-aws-bundle;1.4.0!iceberg-aws-bundle.jar (312ms)
+:: resolution report :: resolve 444ms :: artifacts dl 1005ms
+	:: modules in use:
+	org.apache.iceberg#iceberg-aws-bundle;1.4.0 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-cd59f3a5-13d6-41af-85b6-bee761a75a89
+	confs: [default]
+	2 artifacts copied, 0 already retrieved (56873kB/81ms)
+24/05/21 23:56:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/05/21 23:56:20 INFO SparkContext: Running Spark version 3.4.1
+24/05/21 23:56:20 INFO ResourceUtils: ==============================================================
+24/05/21 23:56:20 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/05/21 23:56:20 INFO ResourceUtils: ==============================================================
+24/05/21 23:56:20 INFO SparkContext: Submitted application: CrudeOilAnalysis
+24/05/21 23:56:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/05/21 23:56:20 INFO ResourceProfile: Limiting resource is cpu
+24/05/21 23:56:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/05/21 23:56:20 INFO SecurityManager: Changing view acls to: root
+24/05/21 23:56:20 INFO SecurityManager: Changing modify acls to: root
+24/05/21 23:56:20 INFO SecurityManager: Changing view acls groups to: 
+24/05/21 23:56:20 INFO SecurityManager: Changing modify acls groups to: 
+24/05/21 23:56:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/05/21 23:56:20 INFO Utils: Successfully started service 'sparkDriver' on port 37029.
+24/05/21 23:56:20 INFO SparkEnv: Registering MapOutputTracker
+24/05/21 23:56:20 INFO SparkEnv: Registering BlockManagerMaster
+24/05/21 23:56:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/05/21 23:56:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/05/21 23:56:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/05/21 23:56:20 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f74660e1-fa49-40b0-a594-3feb894eeed6
+24/05/21 23:56:20 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/05/21 23:56:21 INFO SparkEnv: Registering OutputCommitCoordinator
+24/05/21 23:56:21 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/05/21 23:56:21 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/05/21 23:56:21 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar at spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar at spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:56:21 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:56:21 INFO Executor: Starting executor ID driver on host a109ec0c9061
+24/05/21 23:56:21 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/05/21 23:56:21 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar has been previously copied to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:56:21 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar has been previously copied to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:56:21 INFO Executor: Fetching spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:21 INFO TransportClientFactory: Successfully created connection to a109ec0c9061/172.17.0.2:37029 after 35 ms (0 ms spent in bootstraps)
+24/05/21 23:56:21 INFO Utils: Fetching spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/fetchFileTemp4675822977846792745.tmp
+24/05/21 23:56:21 INFO Utils: /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/fetchFileTemp4675822977846792745.tmp has been previously copied to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:56:22 INFO Executor: Adding file:/tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to class loader
+24/05/21 23:56:22 INFO Executor: Fetching spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335780385
+24/05/21 23:56:22 INFO Utils: Fetching spark://a109ec0c9061:37029/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/fetchFileTemp2977438037082490445.tmp
+24/05/21 23:56:22 INFO Utils: /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/fetchFileTemp2977438037082490445.tmp has been previously copied to /tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:56:22 INFO Executor: Adding file:/tmp/spark-06861701-3764-424b-920b-65ee09628f99/userFiles-3a7363ed-2dbf-4f9a-9af8-b102f38d84ad/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to class loader
+24/05/21 23:56:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33827.
+24/05/21 23:56:22 INFO NettyBlockTransferService: Server created on a109ec0c9061:33827
+24/05/21 23:56:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/05/21 23:56:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, a109ec0c9061, 33827, None)
+24/05/21 23:56:22 INFO BlockManagerMasterEndpoint: Registering block manager a109ec0c9061:33827 with 366.3 MiB RAM, BlockManagerId(driver, a109ec0c9061, 33827, None)
+24/05/21 23:56:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, a109ec0c9061, 33827, None)
+24/05/21 23:56:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, a109ec0c9061, 33827, None)
+24/05/21 23:56:22 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/05/21 23:56:22 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+24/05/21 23:56:23 INFO InMemoryFileIndex: It took 39 ms to list leaf files for 1 paths.
+24/05/21 23:56:23 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+24/05/21 23:56:26 INFO FileSourceStrategy: Pushed Filters: 
+24/05/21 23:56:26 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+24/05/21 23:56:27 INFO CodeGenerator: Code generated in 256.761567 ms
+24/05/21 23:56:27 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 353.0 KiB, free 366.0 MiB)
+24/05/21 23:56:27 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 365.9 MiB)
+24/05/21 23:56:27 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on a109ec0c9061:33827 (size: 35.0 KiB, free: 366.3 MiB)
+24/05/21 23:56:27 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:27 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:56:27 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:27 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/21 23:56:27 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+24/05/21 23:56:27 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:56:27 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:56:27 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:56:27 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.1 KiB, free 365.9 MiB)
+24/05/21 23:56:27 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 365.9 MiB)
+24/05/21 23:56:27 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on a109ec0c9061:33827 (size: 6.0 KiB, free: 366.3 MiB)
+24/05/21 23:56:27 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:56:27 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/21 23:56:27 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/05/21 23:56:27 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (a109ec0c9061, executor driver, partition 0, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:56:27 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/05/21 23:56:28 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:56:28 INFO CodeGenerator: Code generated in 18.205396 ms
+24/05/21 23:56:28 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1726 bytes result sent to driver
+24/05/21 23:56:28 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 424 ms on a109ec0c9061 (executor driver) (1/1)
+24/05/21 23:56:28 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/05/21 23:56:28 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.555 s
+24/05/21 23:56:28 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:56:28 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/05/21 23:56:28 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.604975 s
+24/05/21 23:56:28 INFO CodeGenerator: Code generated in 10.248802 ms
+24/05/21 23:56:28 INFO FileSourceStrategy: Pushed Filters: 
+24/05/21 23:56:28 INFO FileSourceStrategy: Post-Scan Filters: 
+24/05/21 23:56:28 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 353.0 KiB, free 365.6 MiB)
+24/05/21 23:56:28 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 365.5 MiB)
+24/05/21 23:56:28 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on a109ec0c9061:33827 (size: 35.0 KiB, free: 366.2 MiB)
+24/05/21 23:56:28 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:28 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:56:28 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:28 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/05/21 23:56:28 INFO DAGScheduler: Final stage: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0)
+24/05/21 23:56:28 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:56:28 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:56:28 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:56:28 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.1 KiB, free 365.5 MiB)
+24/05/21 23:56:28 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 12.4 KiB, free 365.5 MiB)
+24/05/21 23:56:28 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on a109ec0c9061:33827 (size: 12.4 KiB, free: 366.2 MiB)
+24/05/21 23:56:28 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:56:28 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/05/21 23:56:28 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+24/05/21 23:56:28 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (a109ec0c9061, executor driver, partition 0, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:56:28 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (a109ec0c9061, executor driver, partition 1, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:56:28 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (a109ec0c9061, executor driver, partition 2, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:56:28 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (a109ec0c9061, executor driver, partition 3, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:56:28 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+24/05/21 23:56:28 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+24/05/21 23:56:28 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+24/05/21 23:56:28 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+24/05/21 23:56:28 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 29594385-35264878, partition values: [empty row]
+24/05/21 23:56:28 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 9864795-19729590, partition values: [empty row]
+24/05/21 23:56:28 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:56:28 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 19729590-29594385, partition values: [empty row]
+24/05/21 23:56:29 INFO BlockManagerInfo: Removed broadcast_0_piece0 on a109ec0c9061:33827 in memory (size: 35.0 KiB, free: 366.2 MiB)
+24/05/21 23:56:29 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 1684 bytes result sent to driver
+24/05/21 23:56:29 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 750 ms on a109ec0c9061 (executor driver) (1/4)
+24/05/21 23:56:29 INFO BlockManagerInfo: Removed broadcast_1_piece0 on a109ec0c9061:33827 in memory (size: 6.0 KiB, free: 366.3 MiB)
+24/05/21 23:56:29 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1641 bytes result sent to driver
+24/05/21 23:56:29 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 855 ms on a109ec0c9061 (executor driver) (2/4)
+24/05/21 23:56:29 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 1641 bytes result sent to driver
+24/05/21 23:56:29 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 870 ms on a109ec0c9061 (executor driver) (3/4)
+24/05/21 23:56:29 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 1641 bytes result sent to driver
+24/05/21 23:56:29 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 876 ms on a109ec0c9061 (executor driver) (4/4)
+24/05/21 23:56:29 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/05/21 23:56:29 INFO DAGScheduler: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0) finished in 0.932 s
+24/05/21 23:56:29 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:56:29 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/05/21 23:56:29 INFO DAGScheduler: Job 1 finished: csv at NativeMethodAccessorImpl.java:0, took 0.941619 s
+24/05/21 23:56:29 INFO FileSourceStrategy: Pushed Filters: IsNotNull(originName),EqualTo(originName,United Kingdom)
+24/05/21 23:56:29 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(originName#19),(originName#19 = United Kingdom)
+24/05/21 23:56:29 INFO CodeGenerator: Code generated in 71.185465 ms
+24/05/21 23:56:29 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 352.9 KiB, free 365.5 MiB)
+24/05/21 23:56:29 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 365.5 MiB)
+24/05/21 23:56:29 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on a109ec0c9061:33827 (size: 35.0 KiB, free: 366.2 MiB)
+24/05/21 23:56:29 INFO SparkContext: Created broadcast 4 from showString at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:29 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:56:29 INFO DAGScheduler: Registering RDD 13 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+24/05/21 23:56:29 INFO DAGScheduler: Got map stage job 2 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/05/21 23:56:29 INFO BlockManagerInfo: Removed broadcast_2_piece0 on a109ec0c9061:33827 in memory (size: 35.0 KiB, free: 366.3 MiB)
+24/05/21 23:56:29 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0)
+24/05/21 23:56:29 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:56:29 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:56:29 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:56:29 INFO BlockManagerInfo: Removed broadcast_3_piece0 on a109ec0c9061:33827 in memory (size: 12.4 KiB, free: 366.3 MiB)
+24/05/21 23:56:29 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 42.5 KiB, free 365.9 MiB)
+24/05/21 23:56:29 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 19.9 KiB, free 365.9 MiB)
+24/05/21 23:56:29 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on a109ec0c9061:33827 (size: 19.9 KiB, free: 366.2 MiB)
+24/05/21 23:56:29 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:56:29 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/05/21 23:56:29 INFO TaskSchedulerImpl: Adding task set 2.0 with 4 tasks resource profile 0
+24/05/21 23:56:30 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 5) (a109ec0c9061, executor driver, partition 0, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:56:30 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 6) (a109ec0c9061, executor driver, partition 1, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:56:30 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 7) (a109ec0c9061, executor driver, partition 2, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:56:30 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 8) (a109ec0c9061, executor driver, partition 3, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:56:30 INFO Executor: Running task 2.0 in stage 2.0 (TID 7)
+24/05/21 23:56:30 INFO Executor: Running task 0.0 in stage 2.0 (TID 5)
+24/05/21 23:56:30 INFO Executor: Running task 3.0 in stage 2.0 (TID 8)
+24/05/21 23:56:30 INFO Executor: Running task 1.0 in stage 2.0 (TID 6)
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 17.13386 ms
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 7.140371 ms
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 10.168816 ms
+24/05/21 23:56:30 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 9864795-19729590, partition values: [empty row]
+24/05/21 23:56:30 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:56:30 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 29594385-35264878, partition values: [empty row]
+24/05/21 23:56:30 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 19729590-29594385, partition values: [empty row]
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 13.353958 ms
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 8.493941 ms
+24/05/21 23:56:30 INFO Executor: Finished task 3.0 in stage 2.0 (TID 8). 2864 bytes result sent to driver
+24/05/21 23:56:30 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 8) in 652 ms on a109ec0c9061 (executor driver) (1/4)
+24/05/21 23:56:30 INFO Executor: Finished task 2.0 in stage 2.0 (TID 7). 2821 bytes result sent to driver
+24/05/21 23:56:30 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 7) in 676 ms on a109ec0c9061 (executor driver) (2/4)
+24/05/21 23:56:30 INFO Executor: Finished task 1.0 in stage 2.0 (TID 6). 2821 bytes result sent to driver
+24/05/21 23:56:30 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 6) in 683 ms on a109ec0c9061 (executor driver) (3/4)
+24/05/21 23:56:30 INFO Executor: Finished task 0.0 in stage 2.0 (TID 5). 2821 bytes result sent to driver
+24/05/21 23:56:30 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 5) in 688 ms on a109ec0c9061 (executor driver) (4/4)
+24/05/21 23:56:30 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/05/21 23:56:30 INFO DAGScheduler: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.727 s
+24/05/21 23:56:30 INFO DAGScheduler: looking for newly runnable stages
+24/05/21 23:56:30 INFO DAGScheduler: running: Set()
+24/05/21 23:56:30 INFO DAGScheduler: waiting: Set()
+24/05/21 23:56:30 INFO DAGScheduler: failed: Set()
+24/05/21 23:56:30 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/21 23:56:30 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 25.184291 ms
+24/05/21 23:56:30 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/05/21 23:56:30 INFO DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/21 23:56:30 INFO DAGScheduler: Final stage: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0)
+24/05/21 23:56:30 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+24/05/21 23:56:30 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:56:30 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[16] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:56:30 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 44.8 KiB, free 365.8 MiB)
+24/05/21 23:56:30 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 21.1 KiB, free 365.8 MiB)
+24/05/21 23:56:30 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on a109ec0c9061:33827 (size: 21.1 KiB, free: 366.2 MiB)
+24/05/21 23:56:30 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:56:30 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[16] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/21 23:56:30 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+24/05/21 23:56:30 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 9) (a109ec0c9061, executor driver, partition 0, NODE_LOCAL, 7363 bytes) 
+24/05/21 23:56:30 INFO Executor: Running task 0.0 in stage 4.0 (TID 9)
+24/05/21 23:56:30 INFO ShuffleBlockFetcherIterator: Getting 4 (18.4 KiB) non-empty blocks including 4 (18.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/21 23:56:30 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms
+24/05/21 23:56:30 INFO Executor: Finished task 0.0 in stage 4.0 (TID 9). 5363 bytes result sent to driver
+24/05/21 23:56:30 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 9) in 76 ms on a109ec0c9061 (executor driver) (1/1)
+24/05/21 23:56:30 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+24/05/21 23:56:30 INFO DAGScheduler: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0) finished in 0.088 s
+24/05/21 23:56:30 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:56:30 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+24/05/21 23:56:30 INFO DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 0.106779 s
+24/05/21 23:56:30 INFO CodeGenerator: Code generated in 12.267637 ms
++------------------+--------------+
+|destinationName   |total_quantity|
++------------------+--------------+
+|Texas             |137125        |
+|United States     |233095        |
+|PADD3 (Gulf Coast)|354908        |
+|Louisiana         |112342        |
+|Mississippi       |101885        |
++------------------+--------------+
+
+24/05/21 23:56:30 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/05/21 23:56:30 INFO SparkUI: Stopped Spark web UI at http://a109ec0c9061:4040
+24/05/21 23:56:31 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/05/21 23:56:31 INFO MemoryStore: MemoryStore cleared
+24/05/21 23:56:31 INFO BlockManager: BlockManager stopped
+24/05/21 23:56:31 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/05/21 23:56:31 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/05/21 23:56:31 INFO SparkContext: Successfully stopped SparkContext
+24/05/21 23:56:31 INFO ShutdownHookManager: Shutdown hook called
+24/05/21 23:56:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-06861701-3764-424b-920b-65ee09628f99
+24/05/21 23:56:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-06861701-3764-424b-920b-65ee09628f99/pyspark-8270c1f0-0c5d-4491-a429-58adfb3ce453
+24/05/21 23:56:31 INFO ShutdownHookManager: Deleting directory /tmp/spark-e25cc8ff-b7e2-4fe6-bb85-19a074ecdca0

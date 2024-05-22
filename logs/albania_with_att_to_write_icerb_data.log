@@ -1,0 +1,947 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.iceberg#iceberg-spark-runtime-3.4_2.12 added as a dependency
+org.apache.iceberg#iceberg-aws-bundle added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-c0fb0e28-3a6b-4e79-b6b9-a824774976a2;1.0
+	confs: [default]
+	found org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0 in central
+	found org.apache.iceberg#iceberg-aws-bundle;1.4.0 in central
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.4_2.12/1.4.0/iceberg-spark-runtime-3.4_2.12-1.4.0.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0!iceberg-spark-runtime-3.4_2.12.jar (722ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-aws-bundle/1.4.0/iceberg-aws-bundle-1.4.0.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-aws-bundle;1.4.0!iceberg-aws-bundle.jar (372ms)
+:: resolution report :: resolve 440ms :: artifacts dl 1098ms
+	:: modules in use:
+	org.apache.iceberg#iceberg-aws-bundle;1.4.0 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-3.4_2.12;1.4.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   2   |   2   |   0   ||   2   |   2   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-c0fb0e28-3a6b-4e79-b6b9-a824774976a2
+	confs: [default]
+	2 artifacts copied, 0 already retrieved (56873kB/81ms)
+24/05/21 23:53:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/05/21 23:53:39 INFO SparkContext: Running Spark version 3.4.1
+24/05/21 23:53:39 INFO ResourceUtils: ==============================================================
+24/05/21 23:53:39 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/05/21 23:53:39 INFO ResourceUtils: ==============================================================
+24/05/21 23:53:39 INFO SparkContext: Submitted application: CrudeOilAnalysis
+24/05/21 23:53:39 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/05/21 23:53:39 INFO ResourceProfile: Limiting resource is cpu
+24/05/21 23:53:39 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/05/21 23:53:39 INFO SecurityManager: Changing view acls to: root
+24/05/21 23:53:39 INFO SecurityManager: Changing modify acls to: root
+24/05/21 23:53:39 INFO SecurityManager: Changing view acls groups to: 
+24/05/21 23:53:39 INFO SecurityManager: Changing modify acls groups to: 
+24/05/21 23:53:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/05/21 23:53:40 INFO Utils: Successfully started service 'sparkDriver' on port 40917.
+24/05/21 23:53:40 INFO SparkEnv: Registering MapOutputTracker
+24/05/21 23:53:40 INFO SparkEnv: Registering BlockManagerMaster
+24/05/21 23:53:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/05/21 23:53:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/05/21 23:53:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/05/21 23:53:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-bc9d0677-728b-46ff-a2e9-1329fe50d42a
+24/05/21 23:53:40 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/05/21 23:53:40 INFO SparkEnv: Registering OutputCommitCoordinator
+24/05/21 23:53:40 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/05/21 23:53:40 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/05/21 23:53:40 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar at spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:40 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar at spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:40 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:40 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:53:40 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:40 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:53:40 INFO Executor: Starting executor ID driver on host deacaf5e6662
+24/05/21 23:53:40 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/05/21 23:53:40 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:40 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar has been previously copied to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:53:40 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:41 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar has been previously copied to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:53:41 INFO Executor: Fetching spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:41 INFO TransportClientFactory: Successfully created connection to deacaf5e6662/172.17.0.2:40917 after 41 ms (0 ms spent in bootstraps)
+24/05/21 23:53:41 INFO Utils: Fetching spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/fetchFileTemp1160759408131658548.tmp
+24/05/21 23:53:41 INFO Utils: /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/fetchFileTemp1160759408131658548.tmp has been previously copied to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar
+24/05/21 23:53:41 INFO Executor: Adding file:/tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-aws-bundle-1.4.0.jar to class loader
+24/05/21 23:53:41 INFO Executor: Fetching spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar with timestamp 1716335619742
+24/05/21 23:53:41 INFO Utils: Fetching spark://deacaf5e6662:40917/jars/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/fetchFileTemp1233998237617720862.tmp
+24/05/21 23:53:41 INFO Utils: /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/fetchFileTemp1233998237617720862.tmp has been previously copied to /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar
+24/05/21 23:53:41 INFO Executor: Adding file:/tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/userFiles-6fa6c156-2f95-4b14-9f1e-d720e7ddca1c/org.apache.iceberg_iceberg-spark-runtime-3.4_2.12-1.4.0.jar to class loader
+24/05/21 23:53:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46261.
+24/05/21 23:53:41 INFO NettyBlockTransferService: Server created on deacaf5e6662:46261
+24/05/21 23:53:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/05/21 23:53:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, deacaf5e6662, 46261, None)
+24/05/21 23:53:41 INFO BlockManagerMasterEndpoint: Registering block manager deacaf5e6662:46261 with 366.3 MiB RAM, BlockManagerId(driver, deacaf5e6662, 46261, None)
+24/05/21 23:53:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, deacaf5e6662, 46261, None)
+24/05/21 23:53:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, deacaf5e6662, 46261, None)
+24/05/21 23:53:42 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/05/21 23:53:42 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+24/05/21 23:53:43 INFO InMemoryFileIndex: It took 40 ms to list leaf files for 1 paths.
+24/05/21 23:53:43 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+24/05/21 23:53:46 INFO FileSourceStrategy: Pushed Filters: 
+24/05/21 23:53:46 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+24/05/21 23:53:46 INFO CodeGenerator: Code generated in 265.249621 ms
+24/05/21 23:53:46 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 352.6 KiB, free 366.0 MiB)
+24/05/21 23:53:46 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 365.9 MiB)
+24/05/21 23:53:46 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on deacaf5e6662:46261 (size: 34.9 KiB, free: 366.3 MiB)
+24/05/21 23:53:46 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:53:47 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:47 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/21 23:53:47 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+24/05/21 23:53:47 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:53:47 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:53:47 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.1 KiB, free 365.9 MiB)
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 365.9 MiB)
+24/05/21 23:53:47 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on deacaf5e6662:46261 (size: 6.0 KiB, free: 366.3 MiB)
+24/05/21 23:53:47 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:53:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/21 23:53:47 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/05/21 23:53:47 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (deacaf5e6662, executor driver, partition 0, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:53:47 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/05/21 23:53:47 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:53:47 INFO CodeGenerator: Code generated in 18.15449 ms
+24/05/21 23:53:47 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1726 bytes result sent to driver
+24/05/21 23:53:47 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 428 ms on deacaf5e6662 (executor driver) (1/1)
+24/05/21 23:53:47 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/05/21 23:53:47 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.561 s
+24/05/21 23:53:47 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:53:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/05/21 23:53:47 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.619519 s
+24/05/21 23:53:47 INFO CodeGenerator: Code generated in 10.429319 ms
+24/05/21 23:53:47 INFO FileSourceStrategy: Pushed Filters: 
+24/05/21 23:53:47 INFO FileSourceStrategy: Post-Scan Filters: 
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 352.6 KiB, free 365.6 MiB)
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 365.5 MiB)
+24/05/21 23:53:47 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on deacaf5e6662:46261 (size: 34.9 KiB, free: 366.2 MiB)
+24/05/21 23:53:47 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:47 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:53:47 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:47 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/05/21 23:53:47 INFO DAGScheduler: Final stage: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0)
+24/05/21 23:53:47 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:53:47 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:53:47 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.1 KiB, free 365.5 MiB)
+24/05/21 23:53:47 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 12.4 KiB, free 365.5 MiB)
+24/05/21 23:53:47 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on deacaf5e6662:46261 (size: 12.4 KiB, free: 366.2 MiB)
+24/05/21 23:53:47 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:53:47 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/05/21 23:53:47 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+24/05/21 23:53:47 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (deacaf5e6662, executor driver, partition 0, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:53:47 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (deacaf5e6662, executor driver, partition 1, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:53:47 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (deacaf5e6662, executor driver, partition 2, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:53:47 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (deacaf5e6662, executor driver, partition 3, PROCESS_LOCAL, 7900 bytes) 
+24/05/21 23:53:47 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+24/05/21 23:53:47 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+24/05/21 23:53:47 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+24/05/21 23:53:47 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+24/05/21 23:53:48 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 29594385-35264878, partition values: [empty row]
+24/05/21 23:53:48 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 19729590-29594385, partition values: [empty row]
+24/05/21 23:53:48 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:53:48 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 9864795-19729590, partition values: [empty row]
+24/05/21 23:53:48 INFO BlockManagerInfo: Removed broadcast_1_piece0 on deacaf5e6662:46261 in memory (size: 6.0 KiB, free: 366.2 MiB)
+24/05/21 23:53:48 INFO BlockManagerInfo: Removed broadcast_0_piece0 on deacaf5e6662:46261 in memory (size: 34.9 KiB, free: 366.3 MiB)
+24/05/21 23:53:48 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 1684 bytes result sent to driver
+24/05/21 23:53:48 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 765 ms on deacaf5e6662 (executor driver) (1/4)
+24/05/21 23:53:48 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 1641 bytes result sent to driver
+24/05/21 23:53:48 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 887 ms on deacaf5e6662 (executor driver) (2/4)
+24/05/21 23:53:48 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1641 bytes result sent to driver
+24/05/21 23:53:48 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 894 ms on deacaf5e6662 (executor driver) (3/4)
+24/05/21 23:53:48 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 1641 bytes result sent to driver
+24/05/21 23:53:48 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 905 ms on deacaf5e6662 (executor driver) (4/4)
+24/05/21 23:53:48 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/05/21 23:53:48 INFO DAGScheduler: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0) finished in 0.957 s
+24/05/21 23:53:48 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:53:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/05/21 23:53:48 INFO DAGScheduler: Job 1 finished: csv at NativeMethodAccessorImpl.java:0, took 0.964918 s
+24/05/21 23:53:49 INFO FileSourceStrategy: Pushed Filters: IsNotNull(originName),EqualTo(originName,Albania)
+24/05/21 23:53:49 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(originName#19),(originName#19 = Albania)
+24/05/21 23:53:49 INFO BlockManagerInfo: Removed broadcast_3_piece0 on deacaf5e6662:46261 in memory (size: 12.4 KiB, free: 366.3 MiB)
+24/05/21 23:53:49 INFO BlockManagerInfo: Removed broadcast_2_piece0 on deacaf5e6662:46261 in memory (size: 34.9 KiB, free: 366.3 MiB)
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 87.84518 ms
+24/05/21 23:53:49 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 352.5 KiB, free 366.0 MiB)
+24/05/21 23:53:49 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 365.9 MiB)
+24/05/21 23:53:49 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on deacaf5e6662:46261 (size: 34.9 KiB, free: 366.3 MiB)
+24/05/21 23:53:49 INFO SparkContext: Created broadcast 4 from showString at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:49 INFO FileSourceScanExec: Planning scan with bin packing, max size: 9864795 bytes, open cost is considered as scanning 4194304 bytes.
+24/05/21 23:53:49 INFO DAGScheduler: Registering RDD 13 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+24/05/21 23:53:49 INFO DAGScheduler: Got map stage job 2 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/05/21 23:53:49 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0)
+24/05/21 23:53:49 INFO DAGScheduler: Parents of final stage: List()
+24/05/21 23:53:49 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:53:49 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:53:49 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 42.5 KiB, free 365.9 MiB)
+24/05/21 23:53:49 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 19.9 KiB, free 365.9 MiB)
+24/05/21 23:53:49 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on deacaf5e6662:46261 (size: 19.9 KiB, free: 366.2 MiB)
+24/05/21 23:53:49 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:53:49 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/05/21 23:53:49 INFO TaskSchedulerImpl: Adding task set 2.0 with 4 tasks resource profile 0
+24/05/21 23:53:49 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 5) (deacaf5e6662, executor driver, partition 0, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:53:49 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 6) (deacaf5e6662, executor driver, partition 1, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:53:49 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 7) (deacaf5e6662, executor driver, partition 2, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:53:49 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 8) (deacaf5e6662, executor driver, partition 3, PROCESS_LOCAL, 7889 bytes) 
+24/05/21 23:53:49 INFO Executor: Running task 0.0 in stage 2.0 (TID 5)
+24/05/21 23:53:49 INFO Executor: Running task 3.0 in stage 2.0 (TID 8)
+24/05/21 23:53:49 INFO Executor: Running task 1.0 in stage 2.0 (TID 6)
+24/05/21 23:53:49 INFO Executor: Running task 2.0 in stage 2.0 (TID 7)
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 15.30166 ms
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 9.553324 ms
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 9.227113 ms
+24/05/21 23:53:49 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 9864795-19729590, partition values: [empty row]
+24/05/21 23:53:49 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 19729590-29594385, partition values: [empty row]
+24/05/21 23:53:49 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 0-9864795, partition values: [empty row]
+24/05/21 23:53:49 INFO FileScanRDD: Reading File path: file:///app/data.csv, range: 29594385-35264878, partition values: [empty row]
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 11.673992 ms
+24/05/21 23:53:49 INFO CodeGenerator: Code generated in 7.18309 ms
+24/05/21 23:53:50 INFO Executor: Finished task 3.0 in stage 2.0 (TID 8). 2692 bytes result sent to driver
+24/05/21 23:53:50 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 8) in 731 ms on deacaf5e6662 (executor driver) (1/4)
+24/05/21 23:53:50 INFO Executor: Finished task 0.0 in stage 2.0 (TID 5). 2649 bytes result sent to driver
+24/05/21 23:53:50 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 5) in 823 ms on deacaf5e6662 (executor driver) (2/4)
+24/05/21 23:53:50 INFO Executor: Finished task 2.0 in stage 2.0 (TID 7). 2821 bytes result sent to driver
+24/05/21 23:53:50 INFO Executor: Finished task 1.0 in stage 2.0 (TID 6). 2821 bytes result sent to driver
+24/05/21 23:53:50 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 7) in 837 ms on deacaf5e6662 (executor driver) (3/4)
+24/05/21 23:53:50 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 6) in 839 ms on deacaf5e6662 (executor driver) (4/4)
+24/05/21 23:53:50 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/05/21 23:53:50 INFO DAGScheduler: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.859 s
+24/05/21 23:53:50 INFO DAGScheduler: looking for newly runnable stages
+24/05/21 23:53:50 INFO DAGScheduler: running: Set()
+24/05/21 23:53:50 INFO DAGScheduler: waiting: Set()
+24/05/21 23:53:50 INFO DAGScheduler: failed: Set()
+24/05/21 23:53:50 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/21 23:53:50 INFO CodeGenerator: Code generated in 14.313289 ms
+24/05/21 23:53:50 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/05/21 23:53:50 INFO CodeGenerator: Code generated in 20.156544 ms
+24/05/21 23:53:50 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/05/21 23:53:50 INFO DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/21 23:53:50 INFO DAGScheduler: Final stage: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0)
+24/05/21 23:53:50 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+24/05/21 23:53:50 INFO DAGScheduler: Missing parents: List()
+24/05/21 23:53:50 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[17] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/21 23:53:50 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 45.4 KiB, free 365.8 MiB)
+24/05/21 23:53:50 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 21.4 KiB, free 365.8 MiB)
+24/05/21 23:53:50 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on deacaf5e6662:46261 (size: 21.4 KiB, free: 366.2 MiB)
+24/05/21 23:53:50 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1535
+24/05/21 23:53:50 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[17] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/21 23:53:50 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+24/05/21 23:53:50 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 9) (deacaf5e6662, executor driver, partition 0, NODE_LOCAL, 7363 bytes) 
+24/05/21 23:53:50 INFO Executor: Running task 0.0 in stage 4.0 (TID 9)
+24/05/21 23:53:50 INFO ShuffleBlockFetcherIterator: Getting 2 (956.0 B) non-empty blocks including 2 (956.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/21 23:53:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms
+24/05/21 23:53:50 INFO Executor: Finished task 0.0 in stage 4.0 (TID 9). 5450 bytes result sent to driver
+24/05/21 23:53:50 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 9) in 87 ms on deacaf5e6662 (executor driver) (1/1)
+24/05/21 23:53:50 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+24/05/21 23:53:50 INFO DAGScheduler: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0) finished in 0.103 s
+24/05/21 23:53:50 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/21 23:53:50 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+24/05/21 23:53:50 INFO DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 0.125595 s
+24/05/21 23:53:50 INFO CodeGenerator: Code generated in 9.749231 ms
+24/05/21 23:53:50 INFO CodeGenerator: Code generated in 9.719295 ms
++---------------------------------------------+-----+
+|destinationName                              |total|
++---------------------------------------------+-----+
+|PADD1 (East Coast)                           |9926 |
+|New Jersey                                   |9926 |
+|United States                                |4963 |
+|Paulsboro, NJ                                |4963 |
+|AXEON SPECIALTY PRODUCTS LLC / PAULSBORO / NJ|4963 |
++---------------------------------------------+-----+
+
+24/05/21 23:53:50 INFO BlockManagerInfo: Removed broadcast_6_piece0 on deacaf5e6662:46261 in memory (size: 21.4 KiB, free: 366.2 MiB)
+24/05/21 23:53:50 INFO HiveConf: Found configuration file null
+24/05/21 23:53:51 INFO HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+24/05/21 23:53:51 INFO ObjectStore: ObjectStore, initialize called
+24/05/21 23:53:51 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+24/05/21 23:53:51 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+24/05/21 23:53:52 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+24/05/21 23:53:53 WARN Query: Query for candidates of org.apache.hadoop.hive.metastore.model.MDatabase and subclasses resulted in no possible candidates
+Required table missing : "DBS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "DBS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+	at org.datanucleus.store.rdbms.table.AbstractTable.exists(AbstractTable.java:606)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3385)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2896)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:119)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.manageClasses(RDBMSStoreManager.java:1627)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.getDatastoreClass(RDBMSStoreManager.java:672)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:425)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:865)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:347)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1816)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1744)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.ensureDbInit(MetaStoreDirectSql.java:181)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+24/05/21 23:53:53 WARN Query: Query for candidates of org.apache.hadoop.hive.metastore.model.MTableColumnStatistics and subclasses resulted in no possible candidates
+Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+	at org.datanucleus.store.rdbms.table.AbstractTable.exists(AbstractTable.java:606)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3385)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2896)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:119)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.manageClasses(RDBMSStoreManager.java:1627)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.getDatastoreClass(RDBMSStoreManager.java:672)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:425)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:865)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:347)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1816)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1744)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.ensureDbInit(MetaStoreDirectSql.java:184)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+24/05/21 23:53:53 WARN Query: Query for candidates of org.apache.hadoop.hive.metastore.model.MPartitionColumnStatistics and subclasses resulted in no possible candidates
+Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+	at org.datanucleus.store.rdbms.table.AbstractTable.exists(AbstractTable.java:606)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3385)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2896)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:119)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.manageClasses(RDBMSStoreManager.java:1627)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.getDatastoreClass(RDBMSStoreManager.java:672)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:425)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:865)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:347)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1816)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1744)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.ensureDbInit(MetaStoreDirectSql.java:187)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+24/05/21 23:53:53 WARN Query: Query for candidates of org.apache.hadoop.hive.metastore.model.MConstraint and subclasses resulted in no possible candidates
+Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "CDS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+	at org.datanucleus.store.rdbms.table.AbstractTable.exists(AbstractTable.java:606)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3385)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2896)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:119)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.manageClasses(RDBMSStoreManager.java:1627)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.getDatastoreClass(RDBMSStoreManager.java:672)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:425)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:865)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:347)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1816)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1744)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.ensureDbInit(MetaStoreDirectSql.java:190)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+24/05/21 23:53:53 WARN MetaStoreDirectSql: Self-test query [select "DB_ID" from "DBS"] failed; direct SQL is disabled
+javax.jdo.JDODataStoreException: Error executing SQL query "select "DB_ID" from "DBS"".
+	at org.datanucleus.api.jdo.NucleusJDOHelper.getJDOExceptionForNucleusException(NucleusJDOHelper.java:543)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:391)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.runTestQuery(MetaStoreDirectSql.java:230)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+NestedThrowablesStackTrace:
+java.sql.SQLSyntaxErrorException: Table/View 'DBS' does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement42.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver42.newEmbedPreparedStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.prepareStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.prepareStatement(Unknown Source)
+	at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1193)
+	at org.datanucleus.store.rdbms.SQLController.getStatementForQuery(SQLController.java:345)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getPreparedStatementForQuery(RDBMSQueryUtils.java:211)
+	at org.datanucleus.store.rdbms.query.SQLQuery.performExecute(SQLQuery.java:633)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1855)
+	at org.datanucleus.store.rdbms.query.SQLQuery.executeWithArray(SQLQuery.java:807)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.runTestQuery(MetaStoreDirectSql.java:230)
+	at org.apache.hadoop.hive.metastore.MetaStoreDirectSql.<init>(MetaStoreDirectSql.java:144)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initializeHelper(ObjectStore.java:410)
+	at org.apache.hadoop.hive.metastore.ObjectStore.initialize(ObjectStore.java:342)
+	at org.apache.hadoop.hive.metastore.ObjectStore.setConf(ObjectStore.java:303)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:139)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.<init>(RawStoreProxy.java:58)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.getProxy(RawStoreProxy.java:67)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newRawStoreForConf(HiveMetaStore.java:628)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:594)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: ERROR 42X05: Table/View 'DBS' does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.FromBaseTable.bindTableDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.FromBaseTable.bindNonVTITables(Unknown Source)
+	at org.apache.derby.impl.sql.compile.FromList.bindTables(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindNonVTITables(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindTables(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	... 80 more
+24/05/21 23:53:53 INFO ObjectStore: Initialized ObjectStore
+24/05/21 23:53:53 WARN Query: Query for candidates of org.apache.hadoop.hive.metastore.model.MVersionTable and subclasses resulted in no possible candidates
+Required table missing : "VERSION" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "VERSION" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+	at org.datanucleus.store.rdbms.table.AbstractTable.exists(AbstractTable.java:606)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3385)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2896)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:119)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.manageClasses(RDBMSStoreManager.java:1627)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.getDatastoreClass(RDBMSStoreManager.java:672)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:425)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:865)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:347)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1816)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1744)
+	at org.datanucleus.store.query.Query.execute(Query.java:1726)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:374)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:216)
+	at org.apache.hadoop.hive.metastore.ObjectStore.getMSchemaVersion(ObjectStore.java:7864)
+	at org.apache.hadoop.hive.metastore.ObjectStore.getMetaStoreSchemaVersion(ObjectStore.java:7848)
+	at org.apache.hadoop.hive.metastore.ObjectStore.checkSchema(ObjectStore.java:7804)
+	at org.apache.hadoop.hive.metastore.ObjectStore.verifySchema(ObjectStore.java:7788)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.invoke(RawStoreProxy.java:101)
+	at com.sun.proxy.$Proxy33.verifySchema(Unknown Source)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:595)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Traceback (most recent call last):
+  File "/app/albania_top_five_.py", line 20, in <module>
+    df.write.format("iceberg") \
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1398, in save
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 169, in deco
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o57.save.
+: org.apache.iceberg.hive.RuntimeMetaException: Failed to connect to Hive Metastore
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:84)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:34)
+	at org.apache.iceberg.ClientPoolImpl.get(ClientPoolImpl.java:125)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:56)
+	at org.apache.iceberg.ClientPoolImpl.run(ClientPoolImpl.java:51)
+	at org.apache.iceberg.hive.CachedClientPool.run(CachedClientPool.java:122)
+	at org.apache.iceberg.hive.HiveTableOperations.doRefresh(HiveTableOperations.java:158)
+	at org.apache.iceberg.BaseMetastoreTableOperations.refresh(BaseMetastoreTableOperations.java:97)
+	at org.apache.iceberg.BaseMetastoreTableOperations.current(BaseMetastoreTableOperations.java:80)
+	at org.apache.iceberg.BaseMetastoreCatalog.loadTable(BaseMetastoreCatalog.java:47)
+	at org.apache.iceberg.spark.SparkCatalog.load(SparkCatalog.java:645)
+	at org.apache.iceberg.spark.SparkCatalog.loadTable(SparkCatalog.java:159)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:294)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.metastore.HiveMetaStoreClient
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1742)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:133)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invokeChecked(DynMethods.java:60)
+	at org.apache.iceberg.common.DynMethods$UnboundMethod.invoke(DynMethods.java:72)
+	at org.apache.iceberg.common.DynMethods$StaticMethod.invoke(DynMethods.java:185)
+	at org.apache.iceberg.hive.HiveClientPool.newClient(HiveClientPool.java:63)
+	... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1740)
+	... 37 more
+Caused by: MetaException(message:Version information not found in metastore. )
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:83)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:92)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:6902)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:162)
+	... 42 more
+Caused by: MetaException(message:Version information not found in metastore. )
+	at org.apache.hadoop.hive.metastore.ObjectStore.checkSchema(ObjectStore.java:7810)
+	at org.apache.hadoop.hive.metastore.ObjectStore.verifySchema(ObjectStore.java:7788)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.invoke(RawStoreProxy.java:101)
+	at com.sun.proxy.$Proxy33.verifySchema(Unknown Source)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:595)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:588)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:655)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:79)
+	... 45 more
+
+24/05/21 23:53:53 INFO SparkContext: Invoking stop() from shutdown hook
+24/05/21 23:53:53 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/05/21 23:53:53 INFO SparkUI: Stopped Spark web UI at http://deacaf5e6662:4040
+24/05/21 23:53:53 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/05/21 23:53:53 INFO MemoryStore: MemoryStore cleared
+24/05/21 23:53:53 INFO BlockManager: BlockManager stopped
+24/05/21 23:53:53 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/05/21 23:53:53 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/05/21 23:53:53 INFO SparkContext: Successfully stopped SparkContext
+24/05/21 23:53:53 INFO ShutdownHookManager: Shutdown hook called
+24/05/21 23:53:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66/pyspark-d76577be-9c08-462f-aef8-93f6c2506a95
+24/05/21 23:53:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-0dd702b2-4643-4b1f-b993-3bcb51124e5c
+24/05/21 23:53:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-d0c8a748-99c6-4ac6-b0ec-f1da3df4ee66
