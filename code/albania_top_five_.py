@@ -17,9 +17,9 @@ df = df.orderBy(col("total").desc()).limit(LIMIT)
 df.show(LIMIT, False)
 
 
-df.write.format("iceberg") \
-    .mode("overwrite") \
-    .save("spark_catalog.default.albania_top_five")
+#df.write.format("iceberg") \
+#    .mode("overwrite") \
+#    .save("spark_catalog.default.albania_top_five")
 
 # Stop Spark session
 spark.stop()
